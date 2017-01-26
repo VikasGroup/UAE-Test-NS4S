@@ -1,5 +1,6 @@
 package com.steps;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
 import com.uae.CheckoutPgObject;
@@ -44,10 +45,13 @@ public class IRandRetailPurchase {
 
 	@When("^user click on checkout button$")
 	public void user_click_on_checkout_button() throws Throwable {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		 jse.executeScript("window.scrollBy(0,900)", "");
 	   productsPgObjects.clickCheckOut();
 	   Thread.sleep(2000);
 	   checkoutPgObject.check1();
 	   checkoutPgObject.check2();
+		 jse.executeScript("window.scrollBy(0,300)", "");
 	   checkoutPgObject.clickChkPro();
 	   Thread.sleep(5000);
 	}
