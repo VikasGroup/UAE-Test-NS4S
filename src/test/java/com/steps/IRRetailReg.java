@@ -1,8 +1,10 @@
 package com.steps;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
 import com.kenai.jnr.x86asm.Register;
+import com.uae.AnonymouspurchaseReg;
 import com.uae.LoginPage;
 import com.uae.Registration;
 import com.uae.RegistrationConfirmation;
@@ -22,6 +24,7 @@ public class IRRetailReg {
 	 LoginPage loginPage;
 	 Registration registration;
 	 RegistrationConfirmation registrationConfirmation;
+	 AnonymouspurchaseReg anonymouspurchaseReg;
 	
 	@When("^user click on become a Bus Asso$")
 	public void user_click_on_become_a_Bus_Asso() throws Throwable {
@@ -104,18 +107,30 @@ public class IRRetailReg {
 		registration.enterAdd(arg1);
 		   registration.enterCity(arg2);
 		   registration.enterZip(arg3);
-		  // Thread.sleep(1000);
+		   Thread.sleep(1000);
 		   registration.clickcountRetail();
-		  // Thread.sleep(15000);
+		   Thread.sleep(15000);
 	}
 
 	@Then("^Accept terms and conditions$")
 	public void accept_terms_and_conditions() throws Throwable {
-		Thread.sleep(25000);
+		Thread.sleep(15000);
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		 jse.executeScript("window.scrollBy(0,500)", "");
 	   registration.checkAccept();
 	   registration.clickAccept();
-	  // 
+	   Thread.sleep(25000);
 		  
+	}
+	
+	@When("^Click on annonymous confirm button$")
+	public void click_on_annonymous_confirm_button() throws Throwable {
+		 JavascriptExecutor jse = (JavascriptExecutor)driver;
+		   jse.executeScript("window.scrollBy(0,100)", "");
+		   Thread.sleep(12000);
+	   anonymouspurchaseReg.checktcRetail();
+	   anonymouspurchaseReg.clicktcConfirm();
+	   Thread.sleep(5000);
 	}
 
 	@Then("^Enter ecard details and validate \"([^\"]*)\" \"([^\"]*)\"$")
@@ -132,12 +147,15 @@ public class IRRetailReg {
 
 	@Then("^Click on confirm button$")
 	public void click_on_confirm_button() throws Throwable {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		 jse.executeScript("window.scrollBy(0,500)", "");
 		registration.clickEcardCon();
 		Thread.sleep(5000);
 	}
 
 	@Then("^Validate the Auto Login \"([^\"]*)\"$")
 	public void validate_the_Auto_Login(String arg1) throws Throwable {
+		Thread.sleep(5000);
 	   Assert.assertEquals(registrationConfirmation.readName(), arg1);
 	   
 	}

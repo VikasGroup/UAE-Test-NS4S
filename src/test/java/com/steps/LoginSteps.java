@@ -6,8 +6,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
 import com.uae.HomePage;
 import com.uae.LoginPage;
 
@@ -63,7 +61,7 @@ public class LoginSteps {
 
 	@Then("^validate the landing page \"([^\"]*)\"$")
 	public void validate_the_landing_page(String arg1) throws Throwable {
-			Thread.sleep(12000);
+			Thread.sleep(18000);
 		   Assert.assertEquals(arg1, driver.getCurrentUrl());
 	   
 	}
