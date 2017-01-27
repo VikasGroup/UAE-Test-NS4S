@@ -13,8 +13,7 @@ And validate the landing page "<page _link>"
 Examples:
     |email_ID| password|page _link|
     |HD333649|Test@135 |https://store.qion-ltd.net/en|
-  
-@Reg1
+
 Scenario Outline: Test case 05
 Given user direct to the site
 When user click on Login or Register button
