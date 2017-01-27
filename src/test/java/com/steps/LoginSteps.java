@@ -61,7 +61,7 @@ public class LoginSteps {
 
 	@Then("^validate the landing page \"([^\"]*)\"$")
 	public void validate_the_landing_page(String arg1) throws Throwable {
-			Thread.sleep(12000);
+			Thread.sleep(18000);
 		   Assert.assertEquals(arg1, driver.getCurrentUrl());
 	   
 	}

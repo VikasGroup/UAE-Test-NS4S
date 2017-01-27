@@ -1,6 +1,6 @@
 Feature: UAE smoke test
 
-@Reg
+
 Scenario Outline: Test case 01, 02, 03, 04
 Given user direct to the site
 When user click on Login or Register button
@@ -14,9 +14,8 @@ Examples:
     |email_ID| password|page _link|
     |HD333649|Test@135 |https://store.qion-ltd.net/en|
   
-@Reg
+@Reg1
 Scenario Outline: Test case 05
-
 Given user direct to the site
 When user click on Login or Register button
 And user click on become a Bus Asso
@@ -36,9 +35,9 @@ Then Validate the Auto Login "<Autologin>"
 
 Examples:
     |IR_ID   |Reg_Type  |Title|FName|Lname|BDAY      |Lang   |Mob_no      |Email         |Re_Email      |PWD     |Re_PWD  |Address|City|PostCode|EcardNo       |PIN   |Autologin          |
-    |HD333649|Individual|Mr   |test |vikas|04/10/1985|English|971888909959|osura@vikas.lk|osura@vikas.lk|Test@135|Test@135|test   |test|0000    |F0055657340701|QECTST|Welcome! TEST VIKAS|
+    |HD333649|Individual|Mr   |test |vikas|04/10/1985|English|971888705959|anidu@vikas.lk|anidu@vikas.lk|Test@135|Test@135|test   |test|0000    |F0055657340701|QECTST|Welcome! TEST VIKAS|
       	
-@Reg
+
 Scenario Outline: Test case 06
 Given user direct to the site
 When user click on Login or Register button
@@ -60,7 +59,7 @@ Examples:
     |IR_ID   |Reg_Type|ComName     |Desig|ContPer|Lang   |Mob_no      |Email         |Re_Email      |PWD     |Re_PWD  |Address|City|PostCode|EcardNo       |PIN   |Autologin            |
     |HD333649|Company |Test Company|test |test   |English|971852911199|osura@vikas.lk|osura@vikas.lk|Test@135|Test@135|test   |test|0000    |F0055651240726|QECTST|Welcome! TEST COMPANY|
         
-@Reg
+
 Scenario Outline: Test case 07
 Given user direct to the site
 When user click on Login or Register button
@@ -80,7 +79,7 @@ Examples:
     |IR_ID   |Title|FName|Lname  |BDAY      |Lang   |Mob_no      |Email         |Re_Email      |PWD     |Re_PWD  |Address|City|PostCode|Autologin            |
     |HD333649|Mr   |test |vikasRC|04/10/1985|English|971869994444|osura@vikas.lk|osura@vikas.lk|Test@135|Test@135|test   |test|0000    |Welcome! TEST VIKASRC|
 
-@Reg
+@Reg1
 Scenario Outline: Test case 08
 Given user direct to the site
 When user click on Login or Register button
@@ -100,7 +99,7 @@ Examples:
     |IR_ID   |PWD     | DE_OPTION|EcardNo       |PIN   |Autologin          |    
 	|HD333649|Test@135|          |F0055698340731|QECTST|Welcome! Test VIKAS|
 
-@Reg
+
 Scenario Outline: Test case 09
 Given user direct to the site
 When user click on Login or Register button
@@ -119,7 +118,7 @@ Examples:
     |IR_ID   |PWD     | DE_OPTION|EcardNo       |PIN   |Autologin            |   
 	|CU001369|Test@135|          |F0055698340731|QECTST|Welcome! test vikasRC|
 
-@Reg	
+	
 Scenario Outline: Test case 10
 Given user direct to the site
 When user click on Login or Register button
@@ -139,7 +138,7 @@ Then Validate the Auto Login "<Autologin>"
     |IR_ID   |PWD     |  DE_OPTION|C_Holder|C_Num           |C_Month|C_Year|C_Sec_Cord|  	
 	|HD333649|Test@135|           |test    |4987654321098769|05     |17    |100       |
 	
-@Reg	
+
 Scenario Outline: Test case 11
 Given user direct to the site
 When user click on Login or Register button
@@ -160,7 +159,7 @@ Then Validate the Auto Login "<Autologin>"
     |IR_ID   |PWD   |  DE_OPTION|QA_Pin|Autologin|	
 	|HD330342|testpw|           |qatest|         |
 		
-@Reg  	
+  	
 Scenario Outline: Test case 14
 
 Given user direct to the site
@@ -175,7 +174,7 @@ Examples:
 	|HD333649 | 
  
   	
-@Reg
+
 Scenario Outline: Test case 16 
 
 Given user direct to the site

@@ -107,14 +107,14 @@ public class IRRetailReg {
 		registration.enterAdd(arg1);
 		   registration.enterCity(arg2);
 		   registration.enterZip(arg3);
-		  // Thread.sleep(1000);
+		   Thread.sleep(1000);
 		   registration.clickcountRetail();
-		  // Thread.sleep(15000);
+		   Thread.sleep(15000);
 	}
 
 	@Then("^Accept terms and conditions$")
 	public void accept_terms_and_conditions() throws Throwable {
-		Thread.sleep(5000);
+		Thread.sleep(15000);
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		 jse.executeScript("window.scrollBy(0,500)", "");
 	   registration.checkAccept();
