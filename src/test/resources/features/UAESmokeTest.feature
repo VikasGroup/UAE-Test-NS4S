@@ -76,7 +76,7 @@ Then Validate the Auto Login "<Autologin>"
 
 Examples:
     |IR_ID   |Title|FName|Lname  |BDAY      |Lang   |Mob_no      |Email         |Re_Email      |PWD     |Re_PWD  |Address|City|PostCode|Autologin            |
-    |HD333649|Mr   |test |vikasRC|04/10/1985|English|971861430176|osura@vikas.lk|osura@vikas.lk|Test@135|Test@135|test   |test|0000    |Welcome! TEST VIKASRC|
+    |HD333649|Mr   |test |vikasRC|04/10/1985|English|971861010176|osura@vikas.lk|osura@vikas.lk|Test@135|Test@135|test   |test|0000    |Welcome! TEST VIKASRC|
 
 @Reg
 Scenario Outline: Test case 08
