@@ -155,7 +155,9 @@ public class IRRetailReg {
 
 	@Then("^Validate the Auto Login \"([^\"]*)\"$")
 	public void validate_the_Auto_Login(String arg1) throws Throwable {
-		Thread.sleep(5000);
+		System.out.println("pppppppppppppppppppppppppppppppppppppppppp");
+
+		Thread.sleep(65000);
 	   Assert.assertEquals(registrationConfirmation.readName(), arg1);
 	   
 	}
