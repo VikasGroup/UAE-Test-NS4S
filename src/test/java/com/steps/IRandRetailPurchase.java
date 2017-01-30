@@ -28,36 +28,55 @@ public class IRandRetailPurchase {
 
 	@When("^user click on products link$")
 	public void user_click_on_products_link() throws Throwable {
-	   vODashboard.clickHomePure();
-	 
+	  // vODashboard.clickHomePure();
+	 vODashboard.clickVTube();
+	 Thread.sleep(5000);
+
+
 	}
 
 	@When("^user add products to the cart$")
 	public void user_add_products_to_the_cart() throws Throwable {
+		  Thread.sleep(5000);
+//		productsPgObjects.clickCart();
+	productsPgObjects.clickclearcart();
+//		Thread.sleep(2000);
+//		productsPgObjects.clickCart();
+//		Thread.sleep(5000);
 	   productsPgObjects.clickProd1();
-	 
+	   Thread.sleep(2000);
+	  JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,450)", "");
+		Thread.sleep(3000);
+	   productsPgObjects.clickAdd2cart();
+	   Thread.sleep(5000);
+		 
 	}
 
 	@When("^user click on shopping cart$")
 	public void user_click_on_shopping_cart() throws Throwable {  
 	 productsPgObjects.clickCart();
+	 productsPgObjects.clickCheckOut();
 	}
 
 	@When("^user click on checkout button$")
 	public void user_click_on_checkout_button() throws Throwable {
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
-		 jse.executeScript("window.scrollBy(0,900)", "");
-	   productsPgObjects.clickCheckOut();
+		 jse.executeScript("window.scrollBy(0,700)", "");
+	   
 	   Thread.sleep(2000);
 	   checkoutPgObject.check1();
 	   checkoutPgObject.check2();
-		 jse.executeScript("window.scrollBy(0,300)", "");
+		
 	   checkoutPgObject.clickChkPro();
-	   Thread.sleep(5000);
+	   Thread.sleep(9000);
 	}
 
 	@When("^select delivery option and click checkout \"([^\"]*)\"$")
 	public void select_delivery_option_and_click_checkout(String arg1) throws Throwable {
+		Thread.sleep(1000);
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		 jse.executeScript("window.scrollBy(0,1000)", "");
 	   checkoutPgObject.clickcount_btn();
 	   Thread.sleep(5000);
 	 
