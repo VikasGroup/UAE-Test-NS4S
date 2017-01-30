@@ -14,6 +14,8 @@ import cucumber.api.java.en.When;
 import junit.framework.Assert;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
+import sun.util.logging.resources.logging;
+import util.TpGenerator;
 
 public class IRRetailReg {
 
@@ -75,7 +77,8 @@ public class IRRetailReg {
 
 	@When("^user enter mobile phone no \"([^\"]*)\"$")
 	public void user_enter_mobile_phone_no(String arg1) throws Throwable {
-	   registration.enterMobil(arg1);
+				
+	   registration.enterMobil("97186007"+String.valueOf(TpGenerator.getTP(9000, 1000)));
 	   
 	}
 
@@ -155,8 +158,7 @@ public class IRRetailReg {
 
 	@Then("^Validate the Auto Login \"([^\"]*)\"$")
 	public void validate_the_Auto_Login(String arg1) throws Throwable {
-		System.out.println("pppppppppppppppppppppppppppppppppppppppppp");
-
+		
 		Thread.sleep(65000);
 	   Assert.assertEquals(registrationConfirmation.readName(), arg1);
 	   

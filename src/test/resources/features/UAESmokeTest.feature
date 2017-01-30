@@ -58,7 +58,7 @@ Examples:
     |IR_ID   |Reg_Type|ComName     |Desig|ContPer|Lang   |Mob_no      |Email         |Re_Email      |PWD     |Re_PWD  |Address|City|PostCode|EcardNo       |PIN   |Autologin            |
     |HD333649|Company |Test Company|test |test   |English|971852911199|osura@vikas.lk|osura@vikas.lk|Test@135|Test@135|test   |test|0000    |F0055651240726|QECTST|Welcome! TEST COMPANY|
         
-@Reg
+@Reg1
 Scenario Outline: Test case 07
 Given user direct to the site
 When user click on Login or Register button
@@ -76,7 +76,7 @@ Then Validate the Auto Login "<Autologin>"
 
 Examples:
     |IR_ID   |Title|FName|Lname  |BDAY      |Lang   |Mob_no      |Email         |Re_Email      |PWD     |Re_PWD  |Address|City|PostCode|Autologin            |
-    |HD333649|Mr   |test |vikasRC|04/10/1985|English|971861930116|osura@vikas.lk|osura@vikas.lk|Test@135|Test@135|test   |test|0000    |Welcome! TEST VIKASRC|
+    |HD333649|Mr   |test |vikasRC|04/10/1985|English|971860070116|osura@vikas.lk|osura@vikas.lk|Test@135|Test@135|test   |test|0000    |Welcome! TEST VIKASRC|
 
 @Reg
 Scenario Outline: Test case 08
