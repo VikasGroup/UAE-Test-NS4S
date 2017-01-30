@@ -34,7 +34,7 @@ Then Validate the Auto Login "<Autologin>"
 
 Examples:
     |IR_ID   |Reg_Type  |Title|FName|Lname|BDAY      |Lang   |Mob_no      |Email         |Re_Email      |PWD     |Re_PWD  |Address|City|PostCode|EcardNo       |PIN   |Autologin          |
-    |HD333649|Individual|Mr   |test |vikas|04/10/1985|English|971888705959|anidu@vikas.lk|anidu@vikas.lk|Test@135|Test@135|test   |test|0000    |F0055657340701|QECTST|Welcome! TEST VIKAS|
+    |HD333649|Individual|Mr   |test |vikas|04/10/1985|English|971888701859|anidu@vikas.lk|anidu@vikas.lk|Test@135|Test@135|test   |test|0000    |F0055657340701|QECTST|Welcome! TEST VIKAS|
       	
 @Reg
 Scenario Outline: Test case 06
